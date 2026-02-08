@@ -3,14 +3,10 @@ import HeaderSidebar from "./header-sidebar";
 import ListBackground from "./list-background";
 import TextareaSidebar from "./textarea-sidebar";
 
-type SidebarProps = {
-  setIsOpened: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-const Sidebar = ({ setIsOpened }: SidebarProps) => {
+const Sidebar = () => {
   return (
     <aside className="w-100 px-5 py-6 bg-[#FFFFFF] border ">
-      <HeaderSidebar setIsOpened={setIsOpened} />
+      <HeaderSidebar />
 
       <h2 className="font-semibold pt-5 text-[13px]">Background idea</h2>
 
