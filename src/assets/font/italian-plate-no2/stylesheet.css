@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_extralight-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded_extralight-webfont.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_extralight_italic-webfont.woff2")
+      format("woff2"),
+    url("italian_plate_no2_expanded_extralight_italic-webfont.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_light-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded_light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_light_italic-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded_light_italic-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_italic-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded_italic-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_demibold-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded_demibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_demibold_italic-webfont.woff2")
+      format("woff2"),
+    url("italian_plate_no2_expanded_demibold_italic-webfont.woff")
+      format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_bold-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded_bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_bold_italic-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded_bold_italic-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_extrabold-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded_extrabold-webfont.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_extrabold_italic-webfont.woff2")
+      format("woff2"),
+    url("italian_plate_no2_expanded_extrabold_italic-webfont.woff")
+      format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_black-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded_black-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "italian-plate";
+  src:
+    url("italian_plate_no2_expanded_black_italic-webfont.woff2") format("woff2"),
+    url("italian_plate_no2_expanded_black_italic-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
