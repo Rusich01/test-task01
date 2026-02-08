@@ -34,6 +34,10 @@ const ListBackground = () => {
       <li className=" relative overflow-hidden bg-[url('./img/background/background-05.png')] bg-cover bg-center rounded-2xl">
         <img src="./img/main-img.png" alt="avatar" />
       </li>
+
+      {/* <li className=" relative overflow-hidden bg-[url('./img/background/background-06.jpg')] bg-cover bg-center rounded-2xl">
+        <img src="./img/main-img.png" alt="avatar" />
+      </li> */}
     </ul>
   );
 };
