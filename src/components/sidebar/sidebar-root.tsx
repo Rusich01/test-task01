@@ -1,9 +1,11 @@
+import { useChangeBgStore } from "@/store/useSidebar";
 import { Button } from "../ui/button";
 import HeaderSidebar from "./header-sidebar";
-import ListBackground from "./list-background";
+import ListSidebar from "./list-sidebar";
 import TextareaSidebar from "./textarea-sidebar";
 
-const Sidebar = () => {
+const SidebarRoot = () => {
+  const { addRandomImage } = useChangeBgStore();
   return (
     <aside className="w-100 px-5 py-6 bg-[#FFFFFF] border ">
       <HeaderSidebar />
@@ -12,16 +14,19 @@ const Sidebar = () => {
 
       <TextareaSidebar />
 
-      <Button className="w-full rounded-[100px] cursor-pointer active:scale-95 transition py-5.5 mt-6.5">
+      <Button
+        className="w-full rounded-[100px] cursor-pointer active:scale-95 transition py-5.5 mt-6.5"
+        onClick={addRandomImage}
+      >
         <img src="./img/3-stars.png" alt="" />
         <span>Generate BG for 1 credit</span>
       </Button>
 
       <h3 className="font-semibold text-[13px] mt-9.75">Your backgrounds</h3>
 
-      <ListBackground />
+      <ListSidebar />
     </aside>
   );
 };
 
-export default Sidebar;
+export default SidebarRoot;
