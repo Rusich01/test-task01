@@ -1,4 +1,4 @@
-import { initialBackgrounds, randomImage } from "@/data/data";
+import { backgrounds, randomImage } from "@/data/data";
 import type { BackgroundItem } from "@/types/types";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
@@ -6,7 +6,7 @@ import { persist } from "zustand/middleware";
 interface ChangeBgState {
   // Value:
   isOpened: boolean;
-  initialBackgrounds: BackgroundItem[];
+  backgrounds: BackgroundItem[];
 
   //   Function:
   toggleView: VoidFunction;
@@ -17,7 +17,7 @@ interface ChangeBgState {
 export const useChangeBgStore = create<ChangeBgState>()(
   persist(
     (set) => ({
-      initialBackgrounds,
+      backgrounds,
       isOpened: false,
 
       toggleView: () =>
@@ -27,23 +27,34 @@ export const useChangeBgStore = create<ChangeBgState>()(
 
       removeCard: (id) =>
         set((state) => ({
-          initialBackgrounds: state.initialBackgrounds.filter(
-            (item) => item.id !== id,
-          ),
+          backgrounds: state.backgrounds.filter((item) => item.id !== id),
         })),
 
-      addRandomImage: () =>
+      addRandomImage: () => {
+        const id = String(crypto.randomUUID()).slice(0, 8);
+        const random =
+          randomImage[Math.floor(Math.random() * randomImage.length)];
         set((state) => ({
-          initialBackgrounds: [
-            ...state.initialBackgrounds,
+          backgrounds: [
+            ...state.backgrounds,
             {
-              id: String(crypto.randomUUID()).slice(0, 8),
+              id,
               status: "loading",
-              image:
-                randomImage[Math.floor(Math.random() * randomImage.length)],
+              image: "",
             },
           ],
-        })),
+        }));
+
+        setTimeout(() => {
+          set((state) => ({
+            backgrounds: state.backgrounds.map((item) =>
+              item.id === id
+                ? { ...item, status: "done", image: random }
+                : item,
+            ),
+          }));
+        }, 1000);
+      },
     }),
 
     {
