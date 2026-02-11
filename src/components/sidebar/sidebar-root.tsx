@@ -6,6 +6,7 @@ import TextareaSidebar from "./textarea-sidebar";
 
 const SidebarRoot = () => {
   const { addRandomImage } = useChangeBgStore();
+
   return (
     <aside className="w-100 px-5 py-6 bg-[#FFFFFF] border ">
       <HeaderSidebar />

@@ -1,7 +1,7 @@
 import { useChangeBgStore } from "@/store/useSidebar";
 
 const ListSidebar = () => {
-  const { initialBackgrounds, removeCard } = useChangeBgStore();
+  const { backgrounds, removeCard } = useChangeBgStore();
 
   return (
     <ul className="grid grid-cols-3 gap-4 mt-2.75">
@@ -25,22 +25,24 @@ const ListSidebar = () => {
         <img src="./img/main-img.png" alt="avatar" />
       </li>
 
-      {initialBackgrounds.length > 0 &&
-        initialBackgrounds.map((item) => (
-          <li
-            key={item.id}
-            style={{ backgroundImage: `url(${item.image})` }}
-            className={`relative overflow-hidden bg-cover bg-center rounded-2xl hover:z-10 hover:scale-[1.15] transition`}
-          >
-            <button
-              onClick={() => removeCard(item.id)}
-              className="absolute text-[9px] top-[5%] left-[6%] bg-white px-1 py-px rounded-[2px] text-[#404040] cursor-pointer "
+      {backgrounds.length > 0 &&
+        backgrounds.map((item) =>
+          item.status === "done" ? (
+            <li
+              key={item.id}
+              style={{ backgroundImage: `url(${item.image})` }}
+              className={`relative overflow-hidden bg-cover bg-center rounded-2xl hover:z-10 hover:scale-[1.15] transition`}
             >
-              delete
-            </button>
-            <img src="./img/main-img.png" alt="avatar" />
-          </li>
-        ))}
+              <button
+                onClick={() => removeCard(item.id)}
+                className="absolute text-[9px] top-[5%] left-[6%] bg-white px-1 py-px rounded-[2px] text-[#404040] cursor-pointer active:scale-[0.8] hover:scale-[1.1] transition"
+              >
+                Delete
+              </button>
+              <img src="./img/main-img.png" alt="avatar" />
+            </li>
+          ) : null,
+        )}
     </ul>
   );
 };
