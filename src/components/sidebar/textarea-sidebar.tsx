@@ -10,8 +10,10 @@ const TextareaSidebar = () => {
           effect.
         </Textarea>
       </label>
+
       <div className="absolute bottom-4.75 left-4.75 flex text-[12px]">
         <img src="./img/AI.png" alt="regenerate img" />
+
         <p>Regenerate</p>
       </div>
     </section>

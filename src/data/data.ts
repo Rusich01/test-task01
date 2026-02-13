@@ -6,12 +6,6 @@ export const backgrounds: BackgroundItem[] = [
     status: "done",
     image: "./img/background/background-02.png",
   },
-
-  {
-    id: String(crypto.randomUUID()).slice(0, 8),
-    status: "done",
-    image: "./img/background/background-03.png",
-  },
 ];
 
 export const randomImage = [
