@@ -31,11 +31,11 @@ const ListSidebar = () => {
             <li
               key={item.id}
               style={{ backgroundImage: `url(${item.image})` }}
-              className={`relative overflow-hidden bg-cover bg-center rounded-2xl hover:z-10 hover:scale-[1.15] transition`}
+              className="group  relative overflow-hidden bg-cover bg-center rounded-2xl hover:z-10 hover:scale-[1.15] transition"
             >
               <button
                 onClick={() => removeCard(item.id)}
-                className="absolute text-[9px] top-[5%] left-[6%] bg-white px-1 py-px rounded-[2px] text-[#404040] cursor-pointer active:scale-[0.8] hover:scale-[1.1] transition"
+                className="absolute text-[9px] top-[5%] left-[6%] bg-white px-1 py-px rounded-[2px] text-[#404040] cursor-pointer active:scale-[0.8] hover:scale-[1.1] transition opacity-0 group-hover:opacity-100"
               >
                 Delete
               </button>
